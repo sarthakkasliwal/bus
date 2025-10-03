@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Casa Glam Van — Luxury Double-Decker Vanity Van</title>
+    <meta name="description" content="Luxury double-decker vanity van for fashion showcases, makeup, and private lounge events. Explore interiors, book the van, and get inspired." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#home">
+          <span class="brand-mark">CG</span>
+          <span class="brand-text">Casa Glam Van</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">☰</button>
+          <ul id="nav-menu" class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#story">Story</a></li>
+            <li><a href="#contact" class="btn btn-primary">Book Now</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <h1>Luxury, on Wheels.</h1>
+            <p>Introducing a double‑decker vanity van curated for couture fittings, photo shoots, and red‑carpet glam. Powder‑blue elegance with gilded accents—your mobile fashion and beauty suite.</p>
+            <div class="cta-row">
+              <a href="#contact" class="btn btn-primary">Reserve the Van</a>
+              <a href="#gallery" class="btn btn-ghost">Explore Gallery</a>
+            </div>
+          </div>
+          <div class="hero-media">
+            <img id="heroImage" src="images/exterior-front.jpg" alt="Casa Glam double-decker vanity van exterior" />
+            <div class="hero-upload">
+              <button type="button" class="btn btn-ghost" id="heroUploadBtn">Add Photo</button>
+              <input type="file" id="heroFile" accept="image/*" hidden />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="features">
+        <div class="container">
+          <h2 class="section-title">Designed for Moments that Matter</h2>
+          <div class="features-grid">
+            <article class="feature">
+              <div class="feature-icon">💄</div>
+              <h3>Professional Vanity</h3>
+              <p>Backlit mirrors, salon‑grade lighting, and ergonomic seating for flawless glam sessions.</p>
+            </article>
+            <article class="feature">
+              <div class="feature-icon">👗</div>
+              <h3>Fashion Showcase</h3>
+              <p>Illuminated wardrobes and full‑height mirrors to present collections with boutique polish.</p>
+            </article>
+            <article class="feature">
+              <div class="feature-icon">🛋️</div>
+              <h3>Upper Lounge</h3>
+              <p>Plush seating and chandelier ambiance for private previews and client conversations.</p>
+            </article>
+            <article class="feature">
+              <div class="feature-icon">🧼</div>
+              <h3>Luxury Bath</h3>
+              <p>Marble finishes, glass shower, and thoughtful amenities to refresh between takes.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="gallery">
+        <div class="container">
+          <h2 class="section-title">Gallery</h2>
+          <div class="uploader">
+            <button type="button" id="addGallery" class="btn btn-ghost">Add Gallery Photos</button>
+            <input type="file" id="galleryFiles" accept="image/*" multiple hidden />
+            <p class="hint">Tip: drag & drop images onto the grid.</p>
+          </div>
+          <div class="gallery-grid">
+            <!-- Dynamic images will render here -->
+          </div>
+        </div>
+      </section>
+
+      <section id="story" class="story">
+        <div class="container story-inner">
+          <div class="story-media">
+            <img id="storyImage" src="images/lounge.jpg" alt="Plush blue lounge with chandelier" />
+          </div>
+          <div class="story-copy">
+            <h2>Our Story</h2>
+            <p>Born from runway rigor and film‑set finesse, Casa Glam Van brings a five‑star dressing suite to any street. Every panel is upholstered, every trim gilded, every light tuned for true‑to‑tone color. We built a sanctuary that travels where your vision does.</p>
+            <ul class="checks">
+              <li>On‑location fittings and shoots</li>
+              <li>Private bridal and couture sessions</li>
+              <li>Brand pop‑ups and luxury events</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2 class="section-title">Book the Van</h2>
+          <form class="contact-form" novalidate>
+            <div class="form-grid">
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" placeholder="Your full name" required />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="you@example.com" required />
+              </label>
+              <label>
+                <span>Phone</span>
+                <input type="tel" name="phone" placeholder="+1 555 123 4567" />
+              </label>
+              <label>
+                <span>Event Date</span>
+                <input type="date" name="date" required />
+              </label>
+            </div>
+            <label>
+              <span>Details</span>
+              <textarea name="message" rows="5" placeholder="Tell us about your event and location" required></textarea>
+            </label>
+            <div class="cta-row">
+              <button type="submit" class="btn btn-primary">Request Availability</button>
+              <p class="form-note">We respond within 24 hours.</p>
+            </div>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark">CG</span>
+          <span>Casa Glam Van</span>
+        </div>
+        <div class="footer-right">
+          <a href="#contact" class="btn btn-ghost">Book Now</a>
+          <p class="copyright">© <span id="year"></span> Casa Glam. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/main.js"></script>
+  </body>
+  </html>
+
+
